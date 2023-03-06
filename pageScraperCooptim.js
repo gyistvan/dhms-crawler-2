@@ -1,7 +1,7 @@
 const urlData = require('./cooptimUrls.json')
 const fs = require('fs')
 
-const scraperObjectAlfa = {
+const scraperObjectCooptim = {
   pageCount: urlData.length,
 	async scraper(browser){
     let time = Date.now()
@@ -37,5 +37,5 @@ const scraperObjectAlfa = {
 	}
 }
 
-module.exports = scraperObjectAlfa;
+module.exports = scraperObjectCooptim;
 

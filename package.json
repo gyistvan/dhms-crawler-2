@@ -4,15 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:scarper": "nodemon index.js",
+    "dev:price-update": "nodemon price-update.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape:cooptim": "cross-env scraper=pageScraperCooptim node index.js",
+    "scrape:alfa": "cross-env scraper=pageScraperAlfa node index.js",
+    "scrape:iweld-prod-details": "cross-env scraper=pageScraperIweld node index.js",
+    "price-update": "node price-update.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "csv-writer": "^1.6.0",
     "fs": "^0.0.1-security",
     "node-fetch": "^3.3.0",
-    "puppeteer": "^19.3.0"
+    "nodemon": "^2.0.21",
+    "pngjs": "^7.0.0",
+    "puppeteer": "^19.3.0",
+    "querystring": "^0.2.1",
+    "read-excel-file": "^5.6.1",
+    "sharp": "^0.31.3"
   }
 }
